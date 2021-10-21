@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기본데이터타입</title>
+</head>
+<body>
+    <h1>4. 기본 데이터 타입</h1>
+    <h2>4.1 숫자</h2>
+    <script>
+        var a = 200;
+        a = a + 20;
+        console.log(a); // a = 220
+    </script>
+    <h2>4.2 문자열: 작은 따옴표나 큰 따옴표</h2>
+    <script>
+        var message = '"참 잘했어요 라고 선생님이 말씀하셨다."';
+        console.log(message);
+        var message = "'참 잘했어요' 라고 선생님이 말씀하셨다."; // (""~~")는 오류 ("' ~~'") 로 바꾸기
+        console.log(message);
+        var message = "\"참 잘했어요\" 라고 선생님이 말씀하셨다."; // (""~~"~~")는 오류 ("\"~~\"~~") 로 바꾸기
+        console.log(message);
+    </script>
+    <h2>데이터 타입 확인</h2>
+    <script>
+        console.log(typeof message); // message 데이터값 = 스트링 // 변수의 타입을 알고 싶을때 (typeof 변수)
+        console.log(typeof a); // a 데이터값 = 넘버
+    </script>
+    <h2>4.3 undefined, null, NaN</h2>
+    <script>
+        var y;
+        console.log(y); // y값이 없기 때문에 undefined
+        var x = null; // nul= 꺠끗히 비워놓음
+        console.log(x); 
+    </script>
+    <h2>4.4  boolean (true, false)</h2>
+    <script>
+        var c = true; // 스트링 아님
+        console.log(typeof c); 
+        console.log(c);
+    </script>
+    
+</body>
+</html>
