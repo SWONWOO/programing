@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체</title>
+</head>
+<body>
+    <h1>object</h1>
+
+    <script>
+        // var a = 15;
+        // var b = '게임공학과';
+        // var c = undefined;
+        // var d = null;
+        // var e = true;
+        // var x = [];
+        // var f = {};
+        // var g = function () {}
+       
+        var person = {}; // 객체
+        // 상태 / 속성
+        person.myname = 'Anna';
+        person.age = 15;
+        // 행동 / 메소드
+        person.introduce = function () {
+            console.log('안녕 내이름은 Anna야, 나이는 15살이지');
+        }    
+        console.log(person.age);
+        person.introduce();
+
+        var person2 = {
+            myname : 'mike' ,
+            age: 20,
+            introduce: function () {
+                console.log('안녕! 내이름은 mike야, 나이는 20이지');
+            }     // 객체 안에서 값을 주는 방법 
+        }
+        console.log(person2.myname);
+        person2.introduce();
+
+        // 변수 사용해 소개 문자열을 만들어 보자
+        var person3 = {
+            myname: '성원우' ,
+            age: 30,
+            introduce: function () {
+                   console.log('안녕! 내이름은 ' + this.myname + '이야. 나이는' + this.age + '살이지.'); // this= 지금 내가 들어있는 이 객체
+            }
+        }
+        person3.introduce();
+        // 생성자 constructor
+        function Human(usename, userage) { //class 선언할때는 앞을 대문자로 씀
+            this.myname = usename;
+            this.age = userage;
+            this.introduce = function () {
+                console.log('안녕! 내이름은 ' + this.myname + '이야. 나이는' + this.age + '살이지.')
+            }
+        }
+        // 인스턴스 instance
+        var human1 = new Human('철수', 19);
+        var human2 = new Human("영희", 22);
+
+        human1.introduce();
+        human2.introduce();
+    </script>
+</body>
+</html>

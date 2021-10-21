@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수</title>
+</head>
+<body>
+    <h1>함수</h1>
+
+    <script>
+        // 일반적인 명령 - 자동으로 실행
+        console.log('hello!');   
+        // 함수 - 필요할때만 호출되는 것
+        function example() {
+            console.log('안녕하세요!');
+            console.log('이것은 함수입니다.');
+            console.log('반갑습니다.');
+        }
+        // example();  // 함수 틀을 만들어 놓고 함수를 콜함 example();
+
+        function example2(username/*매개변수*/) {
+            console.log('안녕하세요!' + username);
+            console.log('이것은 함수입니다.');
+            console.log('반갑습니다.');
+        }
+        // example2('김철수');    //되풀이하는 작용을 할때 함수 사용
+        function example3(a, b) {
+            console.log(a + b);
+        }
+        example3(5,6);  
+
+        function 빼기(x, y) {
+            console.log(x - y)
+        }
+        빼기(12, 22);    // 함수를 한글로 써도 되지만 비추
+
+        function mysum(a, b, c) {
+            // var s;
+            // s = a + b + c;
+            // return s;
+            return a + b + c;    // 값만 리턴
+        }
+        var ss = mysum(1, 2, 3);
+        console.log(ss);   // 값을 어딘가에 넣어주고 찍어줘야 콘솔에 찍힘
+
+        </script>
+    
+</body>
+</html>

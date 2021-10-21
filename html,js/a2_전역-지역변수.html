@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scope</title>
+    <script src="test.js"></script>
+</head>
+<body>
+    <h1>변수의 유효범위(scope)</h1>
+
+    <script>
+        var a = 100;     // 전역변수 (모든 영역에서 다 사용됨)
+        function example() {
+            var b = 200;    // 지역변수 (function    안에서만 사용됨)     
+            console.log('example안에서 출력된 a:' + a);
+            console.log('example안에서 출력된 b:' + b);
+        }
+        example();
+        // console.log(b)  // 지역 변수 이기 때문에 function 밖에서 쓰면 에러
+        // 전역변수와 지역변수의 이름이 동일한 경우
+        var aa = 1000; // 전역 변수
+        function example1() {
+            var aa = 'example1 안의 aa'   // 지역 변수
+            var bb = 2000;               // 지역 변수
+            console.log('example1 안에서 출력된 aa:' + aa);
+            console.log(bb);      
+        }
+        example1();
+        console.log(cc);    //외부 파일에 들어있는 cc가 찍힘
+    </script>
+    
+</body>
+</html>
